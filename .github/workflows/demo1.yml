@@ -2,7 +2,7 @@ name: hello
 "on": push
 jobs:
   my-job:
-  run-on: ununtu-latest
+  runs-on: ununtu-latest
   steps:
     - name: my-step
       run: echo "Hello"
