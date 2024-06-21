@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_lithesheeli1_GitHubActions1_1718949879404-push-trigger-input-set
+  identifier: Build_lithesheeli1_GitHubActions1_1718949879404pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: second_project
+  pipeline:
+    identifier: Build_lithesheeli1_GitHubActions1_1718949879404
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>

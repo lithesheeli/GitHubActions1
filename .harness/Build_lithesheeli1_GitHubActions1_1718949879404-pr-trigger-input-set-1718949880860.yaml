@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_lithesheeli1_GitHubActions1_1718949879404-pr-trigger-input-set
+  identifier: Build_lithesheeli1_GitHubActions1_1718949879404prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: second_project
+  pipeline:
+    identifier: Build_lithesheeli1_GitHubActions1_1718949879404
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
