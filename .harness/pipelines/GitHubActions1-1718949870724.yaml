@@ -1,35 +1,11 @@
-pipeline:
-  identifier: Build_lithesheeli1_GitHubActions1_1718949879404
-  name: Build GitHubActions1
-  orgIdentifier: default
-  projectIdentifier: second_project
-  properties:
-    ci:
-      codebase:
-        build: <+input>
-        connectorRef: account.Github
-        repoName: lithesheeli1/GitHubActions1
-  stages:
-    - stage:
-        identifier: build
-        name: build
-        spec:
-          caching:
-            enabled: true
-          cloneCodebase: true
-          execution:
-            steps:
-              - step:
-                  identifier: echo
-                  name: echo
-                  spec:
-                    command: echo hello world
-                  timeout: ""
-                  type: Run
-          platform:
-            arch: Amd64
-            os: Linux
-          runtime:
-            spec: {}
-            type: Cloud
-        type: CI
+name: hello
+run-name: sample yml code using Actions
+on: [push]
+
+jobs:
+  build:
+   runs-on: ubuntu-latest
+  
+   steps:
+    - name: my-step
+      run: echo "Hello"
