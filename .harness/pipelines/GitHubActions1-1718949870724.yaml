@@ -10,8 +10,6 @@ pipeline:
         connectorRef: account.Github
         repoName: lithesheeli1/GitHubActions1
   stages:
-    - stage:
-          execution:
-   steps:
-    - name: my-step
-      run: echo "Hello"
+    - steps:
+        - name: my-step
+          run: echo "Hello"
