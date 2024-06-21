@@ -1,6 +1,6 @@
 pipeline:
   identifier: Build_lithesheeli1_GitHubActions1_1718949879404
-  name: Build GitHubActions1
+  name: Build maven-project
   orgIdentifier: default
   projectIdentifier: second_project
   properties:
@@ -8,8 +8,28 @@ pipeline:
       codebase:
         build: <+input>
         connectorRef: account.Github
-        repoName: lithesheeli1/GitHubActions1
+        repoName: lithesheeli1/maven-project
   stages:
-    - steps:
-        - name: my-step
-          run: echo "Hello"
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          caching:
+            enabled: true
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: echo
+                  name: echo
+                  spec:
+                    command: echo hello GIT HUB project
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Cloud
+        type: CI
