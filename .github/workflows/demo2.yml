@@ -10,4 +10,3 @@ jobs:
     - name: my-step
       run: 
        echo "Hello testing1" 
-       echo "Hello testing2" 
